@@ -388,6 +388,9 @@ class _SegmentedControlState<T> extends State<MaterialSegmentedControl<T>>
   }
 
   BorderRadius _calculateBorderRadius(int index) {
+    return BorderRadius.all(Radius.circular(widget.borderRadius));
+  }
+/*
     return index == 0
         ? BorderRadius.only(
             topLeft: Radius.circular(widget.borderRadius),
@@ -400,6 +403,7 @@ class _SegmentedControlState<T> extends State<MaterialSegmentedControl<T>>
               )
             : null;
   }
+*/
 }
 
 class _SegmentedControlRenderWidget<T> extends MultiChildRenderObjectWidget {
